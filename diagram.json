@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "author": "Jair Ierich",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb2", "top": 601.8, "left": 41.2, "attrs": {} },
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno1",
+      "top": 603.8,
+      "left": -350.2,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz2",
+      "top": 636,
+      "left": 184.2,
+      "attrs": { "volume": "0.1" }
+    },
+    { "type": "wokwi-led", "id": "led2", "top": 678, "left": 138.2, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay2",
+      "top": 627,
+      "left": 234,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht2",
+      "top": 605.1,
+      "left": 71.4,
+      "attrs": { "temperature": "22.5", "humidity": "61.5" }
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo2",
+      "top": 440.6,
+      "left": 213,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd2004",
+      "id": "lcd2",
+      "top": 294.4,
+      "left": 447.2,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "bb2:3b.g", "bb2:bp.3", "red", [ "v0" ] ],
+    [ "bb2:10b.g", "bb2:bn.8", "black", [ "v0" ] ],
+    [ "bb2:6b.g", "bb2:bn.5", "black", [ "v0" ] ],
+    [ "bb2:16b.g", "bb2:bn.13", "black", [ "v0" ] ],
+    [ "bb2:25b.g", "bb2:bn.21", "black", [ "v0" ] ],
+    [ "bb2:24b.g", "bb2:bp.20", "red", [ "v0" ] ],
+    [ "bb2:bp.25", "bb2:tp.25", "red", [ "v-0.9", "h59.2", "v-173.1" ] ],
+    [ "dht2:VCC", "bb2:3b.f", "", [ "$bb" ] ],
+    [ "dht2:SDA", "bb2:4b.f", "", [ "$bb" ] ],
+    [ "dht2:NC", "bb2:5b.f", "", [ "$bb" ] ],
+    [ "dht2:GND", "bb2:6b.f", "", [ "$bb" ] ],
+    [ "bz2:1", "bb2:16b.f", "", [ "$bb" ] ],
+    [ "bz2:2", "bb2:17b.f", "", [ "$bb" ] ],
+    [ "led2:A", "bb2:11b.f", "", [ "$bb" ] ],
+    [ "led2:C", "bb2:10b.f", "", [ "$bb" ] ],
+    [ "bb2:tn.25", "bb2:bn.25", "black", [ "v-0.1", "h40", "v174.1" ] ],
+    [ "uno1:GND.1", "bb2:bn.1", "black", [ "v19.2", "h268.5" ] ],
+    [ "uno1:5V", "bb2:bp.1", "red", [ "v-28.7", "h255.4", "v201.6" ] ],
+    [ "uno1:2", "bb2:4b.g", "green", [ "v48", "h408.7" ] ],
+    [ "bb2:11b.g", "uno1:7", "violet", [ "v163.2", "h-422.4" ] ],
+    [ "uno1:9", "bb2:17b.g", "cyan", [ "v86.4", "h460" ] ],
+    [ "bb2:26b.g", "uno1:8", "gold", [ "v201.6", "h-556.8" ] ],
+    [ "servo2:GND", "bb2:tn.19", "black", [ "v0" ] ],
+    [ "servo2:V+", "bb2:tp.21", "red", [ "v0" ] ],
+    [ "relay2:VCC", "bb2:24b.f", "", [ "$bb" ] ],
+    [ "relay2:GND", "bb2:25b.f", "", [ "$bb" ] ],
+    [ "relay2:IN", "bb2:26b.f", "", [ "$bb" ] ],
+    [ "uno1:6", "servo2:PWM", "blue", [ "v67.2", "h716.3", "v-278.4" ] ],
+    [ "bb2:tn.13", "lcd2:GND", "black", [ "v0" ] ],
+    [ "uno1:A5", "lcd2:SCL", "yellow", [ "v0" ] ],
+    [ "uno1:A4", "lcd2:SDA", "purple", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
