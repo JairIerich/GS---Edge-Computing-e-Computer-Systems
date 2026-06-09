@@ -143,6 +143,6 @@ No projeto tem mais um pouco de documentação, onde lá é repassado mais diret
 
 ---
 
-## 📊 Conclusão
+## Conclusão
 
 Este projeto demonstra um sistema de automação simples aplicado à agricultura inteligente, integrando sensores, atuadores e lógica de controle para manter um ambiente ideal para cultivo.
