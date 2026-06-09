@@ -125,11 +125,11 @@ No projeto tem mais um pouco de documentação, onde lá é repassado mais diret
 
 ## Integrantes do Grupo
 
-- Jair Ierich – RM569524  
-- Maria Gabriela – RM569047  
-- Vicente de Souza – RM569205  
-- Felipe Marialva – RM569031  
-- Bianca Veloso – RM572036  
+- Jair Ierich – RM 569524  
+- Maria Gabriela – RM 569047  
+- Vicente de Souza – RM 569205  
+- Felipe Marialva – RM 569031  
+- Bianca Veloso – RM 572036  
 
 ---
 
